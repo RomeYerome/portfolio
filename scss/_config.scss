@@ -1,0 +1,20 @@
+// Variables
+$siteWidth: 1280px;
+$priColor: #ffbc00;
+$lightColor: #f4f4f4;
+$medColor: #ccc;
+$darkColor: #333;
+$bgImage: url('../img/showcase.jpg');
+
+
+// Set Text Color
+
+@function set-text-color($bgColor) {
+    @if (lightness($bgColor) > 50) {
+        @return #000;
+    }
+
+    @else {
+        @return #fff;
+    }
+}

@@ -1,0 +1,129 @@
+// Tablets & Smaller
+@media (max-width:820px) {
+
+    .container {
+        width: auto;
+    }
+
+    #header-home {
+        height: 30rem;
+
+        .header-content {
+            padding-top: 5rem;
+        }
+    }
+}
+
+
+@media (max-width:500px) {
+    .container {
+        width: auto;
+    }
+
+    #main-nav {
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+
+        li {
+            padding: 1rem;
+        }
+    }
+
+
+    #header {
+        &-home {
+            height: 10rem;
+            border-bottom: 3px solid $priColor;
+            background-position: 20% 30%;
+
+            .header-content {
+                display: none;
+            }
+        }
+
+        &-inner {
+            height: 10rem;
+        }
+    }
+
+    #home-a .specials,
+    #home-b .stats,
+    #home-c .process,
+    #about-d .testimonials,
+    .items,
+    #contact-b .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    #home {
+        &-a .specials div {
+            border-bottom: solid 1px lighten($medColor, 10%);
+            padding-bottom: 1rem;
+
+            &:last-child {
+                padding-bottom: 0;
+                border: none;
+            }
+        }
+
+        &-b .stats div {
+            padding: 2rem 0 1rem;
+        }
+    }
+
+
+    // About
+    #about {
+        &-a {
+            .about-info {
+                grid-template-areas: 'img' 'bio' 'award-1' 'award-2' 'award-3';
+            }
+        }
+
+        &-c {
+            display: none;
+        }
+    }
+
+
+    #contact {
+        &-a {
+            .text-fields {
+                grid-template-areas: 'name' 'email' 'phone' 'subject' 'message';
+            }
+        }
+
+        &-b {
+            div {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $medColor;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border: none;
+                }
+            }
+        }
+
+        &-c {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    #main-footer {
+        height: 8rem;
+
+        .footer-content {
+            flex-direction: column;
+            gap: .7rem;
+            padding: 1rem;
+            height: 7rem;
+        }
+    }
+}
